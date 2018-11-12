@@ -1,0 +1,16 @@
+OBCPL CHANGES
+
+
+Release 0.9.8
+
+This distribution is based on the 0.9.6 bcplkit release, but uses
+a more capable compiler frontend and supplies a new x86 compiler
+backend, together with a peephole optimizer, while dropping INTCODE
+support.  Extensive revisions have been made to existing code.  New
+features include GETVEC() and FREEVEC(), and better support for the
+UNIX command line (ARGC, ARGV, PARAM) and for system error reporting
+(RESULT2).
+
+
+Robert Nordier
+www.nordier.com
