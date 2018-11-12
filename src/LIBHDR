@@ -1,0 +1,57 @@
+// obcpl LIBHDR
+
+GLOBAL
+$(
+    START: 1                // START(ARG)
+    SELECTINPUT: 11         // SELECTINPUT(N)
+    SELECTOUTPUT: 12        // SELECTOUTPUT(N)
+    RDCH: 13                // CH := RDCH()
+    WRCH: 14                // WRCH(CH)
+    UNRDCH: 15              // UNRDCH()
+    INPUT: 16               // STREAM := INPUT()
+    OUTPUT: 17              // STREAM := OUTPUT()
+    STOP: 30                // STOP(N)
+    LEVEL: 31               // P := LEVEL()
+    LONGJUMP: 32            // LONGJUMP(P,L)
+    REWIND: 35              // REWIND()
+    APTOVEC: 40             // RES := APTOVEC(F, N)
+    FINDOUTPUT: 41          // STREAM := FINDOUTPUT(S)
+    FINDINPUT: 42           // STREAM := FINDINPUT(S)
+    ENDREAD: 46             // ENDREAD()
+    ENDWRITE: 47            // ENDWRITE()
+    WRITES: 60              // WRITES(S)
+    WRITEN: 62              // WRITEN(N)
+    NEWLINE: 63             // NEWLINE()
+    NEWPAGE: 64             // NEWPAGE()
+    PACKSTRING: 66          // I := PACKSTRING(U, S)
+    UNPACKSTRING: 67        // UNPACKSTRING(S, U)
+    WRITED: 68              // WRITED(N,W)
+    READN: 70               // N := READN()
+    TERMINATOR: 71          // Last byte read by READN()
+    WRITEHEX: 75            // WRITEHEX(N,D)
+    WRITEF: 76              // WRITEF(F,A1,A2,...,A11)
+    WRITEOCT: 77            // WRITEOCT(N,D)
+    GETBYTE: 85             // CH := GETBYTE(V, N)
+    PUTBYTE: 86             // PUTBYTE(V, N, B)
+    GETVEC: 87              // V := GETVEC(SIZE)
+    FREEVEC: 88             // FREEVEC(V)
+    RESULT2: 91             // Various results
+    CAPITALCH: 92           // CAPITALCH(CH)
+    STACKBASE: 95           // Base of runtime stack
+    STACKEND: 96            // End of runtime stack
+    ARGC: 97                // UNIX argc
+    ARGV: 98                // UNIX argv as BCPL strings
+    PARAM: 99               // ARGV!1 or ""
+$)
+
+MANIFEST
+$(
+    ENDSTREAMCH = -1
+    BYTESPERWORD = 4
+    BITSPERWORD = 32
+    MAXINT = #X7FFFFFFF
+    MININT = #X80000000
+    MAXSTRLENGTH = 255
+    FIRSTFREEGLOBAL = 100
+    UG = FIRSTFREEGLOBAL
+$)

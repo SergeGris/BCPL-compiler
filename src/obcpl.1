@@ -1,0 +1,65 @@
+.\" Copyright (C) 2007 Robert Nordier. All rights reserved.
+.TH OBCPL 1
+.SH NAME
+obcpl \- BCPL compiler
+.SH SYNOPSIS
+.B obcpl
+[ option ] ... file ...
+.SH DESCRIPTION
+The command
+.I obcpl
+is an interface to the BCPL toolchain, and invokes compiler
+frontend, compiler backend, assembler, and linker in response to
+options and filenames presented as arguments.
+.PP
+In determining how to deal with any particular file,
+.I obcpl
+considers the last portion of the filename:
+.
+.RS
+.IP \(bu 4
+Files with names ending in `.b' are assumed to be BCPL source files,
+and are processed starting at the frontend compilation stage.
+.IP \(bu 4
+Files with names ending in `.O' are assumed to be OCODE files,
+and are processed starting at the backend compilation stage.
+.IP \(bu 4
+Files with names ending in `.s' are assumed to be assembly
+language source files, and are processed starting at the
+assembly stage.
+.IP \(bu 4
+Files with names ending in `.o' are assumed to be object files,
+and are passed to the linker.
+.RE
+.PP
+Processing can be stopped at the end of any particular phase
+through the use of options.
+Options
+.BR \-C ,
+.BR \-S ,
+and
+.B \-c
+cause processing to stop after the OCODE generation phase, the
+code generation phase, or the assembly phase, respectively.
+For each input file, the result is written to a file of the same
+name but with the suffix changed to `.O' or `.s' or `.o'.
+.PP
+.PP
+The supported options are:
+.TP
+.B \-c
+Stop after assembly.
+.TP
+.BI \-C
+Stop after processing by compiler frontend.
+.TP
+.BI \-o output
+Name the output file
+.I output
+rather than the default.
+.TP
+.B \-O
+Enable optimisation.
+.TP
+.B \-S
+Stop after processing by compiler backend.

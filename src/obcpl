@@ -1,0 +1,87 @@
+#!/bin/sh -e
+
+# A cc-like compiler driver for BCPL
+# Copyright (c) 2012 Robert Nordier. All rights reserved.
+
+error()
+{
+    echo $@ >&2
+    exit 2
+}
+
+d=/usr/local/lib/obcpl
+ohead="$d/su.o"
+otail="$d/blib.o $d/global.o $d/rt.o $d/sys.o"
+Oflag=0
+cflag=4
+args=`getopt COSco: $*`
+set -- $args
+for i
+do
+    case "$i"
+    in
+        -C)
+            cflag=1; shift;;
+        -O)
+            Oflag=1; shift;;
+        -S)
+            cflag=2; shift;;
+        -c)
+            cflag=3; shift;;
+        -o)
+            oname="$2"; shift; shift;;
+        --)
+            shift; break;;
+    esac
+done
+if test $# -lt 1; then
+    error 'usage: obcpl [-COSc] [-o output] file ...'
+fi
+rm -f /tmp/$$_tmp.*
+for arg in $@
+do
+    x=`expr "$arg" : '.*[.]\([bOso]\)'` || error "$arg: Unknown type"
+    case $x in
+    b) i=1 ;;
+    O) i=2 ;;
+    s) i=3 ;;
+    o) i=4 ;;
+    esac
+    f=`basename $arg .$x`
+    if test -z "$oname"; then
+        oname=$f
+    fi
+    if test $i -gt $cflag; then
+        error "$arg: Can't process further"
+    fi
+    ifile=$arg
+    while test $i -le 3 -a $i -le $cflag
+    do
+        case $i in
+        1) x=O ;;
+        2) x=s ;;
+        3) x=o ;;
+        esac
+        if test $i -eq $cflag -o $i -eq 3; then
+            ofile=$f.$x
+        else
+            ofile=/tmp/$$_tmp.$x
+        fi
+        case $i in
+        1) $d/st < $ifile > $ofile ;;
+        2) if test $Oflag -eq 0; then
+               $d/cg < $ifile > $ofile
+           else
+               $d/cg < $ifile | $d/op > $ofile
+           fi ;;
+        3) as --32 -o $ofile $ifile ;;
+        esac
+        ifile=$ofile
+        i=$(($i+1))
+    done
+    olist="$olist $ifile"
+    rm -f /tmp/$$_tmp.*
+done
+if test $cflag -eq 4; then
+    ld -m elf_i386 -o $oname $ohead $olist $otail
+fi
