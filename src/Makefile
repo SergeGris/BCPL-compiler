@@ -1,4 +1,4 @@
-# Makefile for obcpl/src
+# Makefile for bcpl/src
 
 PREFIX?=/usr/local
 
@@ -61,23 +61,23 @@ blib.chk: st blib.bcpl
 st.chk:	st st.bcpl
 	./st < st.bcpl > st.chk
 
-install: obcpl obcpl.1 st cg op LIBHDR su.o blib.o global.o rt.o sys.o
+install: bcplc bcplc.1 st cg op LIBHDR su.o blib.o global.o rt.o sys.o
 	mkdir -p $(PREFIX)/bin
-	install -c  -m 755 obcpl     $(PREFIX)/bin
+	install -c  -m 755 bcplc     $(PREFIX)/bin
 	mkdir -p $(PREFIX)/man/man1
-	install -c  -m 644 obcpl.1   $(PREFIX)/man/man1
-	mkdir -p $(PREFIX)/lib/obcpl
-	install -cs -m 555 st	     $(PREFIX)/lib/obcpl
-	install -cs -m 555 cg	     $(PREFIX)/lib/obcpl
-	install -cs -m 555 op	     $(PREFIX)/lib/obcpl
-	install -c  -m 644 LIBHDR    $(PREFIX)/lib/obcpl
-	install -c  -m 444 su.o	     $(PREFIX)/lib/obcpl
-	install -c  -m 444 blib.o    $(PREFIX)/lib/obcpl
-	install -c  -m 444 global.o  $(PREFIX)/lib/obcpl
-	install -c  -m 444 rt.o	     $(PREFIX)/lib/obcpl
-	install -c  -m 444 sys.o     $(PREFIX)/lib/obcpl
-	rm -f $(PREFIX)/lib/obcpl/libhdr
-	ln $(PREFIX)/lib/obcpl/LIBHDR $(PREFIX)/lib/obcpl/libhdr
+	install -c  -m 644 bcplc.1   $(PREFIX)/man/man1
+	mkdir -p $(PREFIX)/lib/bcplc
+	install -cs -m 555 st	     $(PREFIX)/lib/bcplc
+	install -cs -m 555 cg	     $(PREFIX)/lib/bcplc
+	install -cs -m 555 op	     $(PREFIX)/lib/bcplc
+	install -c  -m 644 LIBHDR    $(PREFIX)/lib/bcplc
+	install -c  -m 444 su.o	     $(PREFIX)/lib/bcplc
+	install -c  -m 444 blib.o    $(PREFIX)/lib/bcplc
+	install -c  -m 444 global.o  $(PREFIX)/lib/bcplc
+	install -c  -m 444 rt.o	     $(PREFIX)/lib/bcplc
+	install -c  -m 444 sys.o     $(PREFIX)/lib/bcplc
+	rm -f $(PREFIX)/lib/bcplc/libhdr
+	ln $(PREFIX)/lib/bcplc/LIBHDR $(PREFIX)/lib/bcplc/libhdr
 
 clean:
 	rm -f cg cg.o oc.o op op.o pt.o
