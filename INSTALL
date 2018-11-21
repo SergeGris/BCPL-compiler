@@ -1,4 +1,4 @@
-OBCPL INSTALL
+BCPLC INSTALL
 
 This is an x86 (IA-32) port of an old BCPL compiler (see README)
 and should build cleanly on x86 FreeBSD and Linux.  Differences
@@ -34,15 +34,15 @@ to build the compiler, and
     make install
 
 to install the components.  By default, these mostly go in
-"/usr/local/lib/obcpl".  You can also change to the "doc" directory
+"/usr/local/lib/bcplc".  You can also change to the "doc" directory
 and
 
     make install
 
-to install documentation to "/usr/local/share/doc/obcpl".
+to install documentation to "/usr/local/share/doc/bcplc".
 
 Should you wish to install the compiler somewhere other than
-"/usr/local/lib/obcpl", be sure to change occurrences of this path
+"/usr/local/lib/bcplc", be sure to change occurrences of this path
 in the compiler sources.
 
 Once the compiler is built and installed, it is possible to build
