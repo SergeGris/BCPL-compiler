@@ -1,4 +1,4 @@
-# OBCPL README
+# BCPLC README
 
 This is an i386 (IA-32) port of the "classic" old BCPL compiler
 (around 1980) from the Tripos Research Group at Cambridge University.
