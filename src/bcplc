@@ -35,7 +35,7 @@ do
     esac
 done
 if test $# -lt 1; then
-    error 'usage: obcpl [-COSc] [-o output] file ...'
+    error 'usage: ./bcplc [-COSc] [-o output] file ...'
 fi
 rm -f /tmp/$$_tmp.*
 for arg in $@
