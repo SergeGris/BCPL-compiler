@@ -1,12 +1,12 @@
-# Makefile for obcpl/doc
+# Makefile for bcplc/doc
 
 PREFIX?=/usr/local
 
 all:
 
 install:
-	mkdir -p $(PREFIX)/share/doc/obcpl
-	install -c -m 444 manual.txt   $(PREFIX)/share/doc/obcpl
-	install -c -m 444 standard.txt $(PREFIX)/share/doc/obcpl
+	mkdir -p $(PREFIX)/share/doc/bcplc
+	install -c -m 444 manual.txt   $(PREFIX)/share/doc/bcplc
+	install -c -m 444 standard.txt $(PREFIX)/share/doc/bcplc
 
 clean:
