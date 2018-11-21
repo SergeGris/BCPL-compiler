@@ -1,4 +1,4 @@
-OBCPL README
+BCPLC README
 
 This is an x86 (IA-32) port of the "classic" old BCPL compiler
 (around 1980) from the Tripos Research Group at Cambridge University.
@@ -14,17 +14,17 @@ Colin Whitby-Stevens (Cambridge: Cambridge University Press, 1979).
 
 As a real, working computer language implementation, that can be
 studied, modified, and played with, the classic BCPL compiler has
-a good deal to recommend it.  The compiler frontend consists of
+a good deal to recommend it. The compiler frontend consists of
 only about 2000 lines of BCPL code, and (as supplied here) compiles
 to a static (fully-linked) x86 binary that is less than 36000 bytes
 in size.
 
 The present distribution supplies a compiler backend (OCODE to x86
 code generator), together with peephole optimizer, and reasonably
-extensive runtime support.  A few revisions have been made to the
+extensive runtime support. A few revisions have been made to the
 compiler frontend -- it looks for header files in a standard location,
-for instance -- and  the runtime incorporates support for UNIX
-command line arguments and error reporting.  Some documentation
+for instance -- and the runtime incorporates support for UNIX
+command line arguments and error reporting. Some documentation
 that formed part of the original BCPL distribution tape is also
 included, as are a few utility programs.
 
