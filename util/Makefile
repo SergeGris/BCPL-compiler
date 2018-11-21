@@ -1,6 +1,6 @@
-# Makefile for obcpl/util
+# Makefile for bcplc/util
 
-BC=obcpl
+BC=bcplc
 BFLAGS=-O
 
 all: cmpltest xref gpm
