@@ -9,7 +9,7 @@ error()
     exit 2
 }
 
-d=/usr/local/lib/obcpl
+d=/usr/local/lib/BCPL
 ohead="$d/su.o"
 otail="$d/blib.o $d/global.o $d/rt.o $d/sys.o"
 Oflag=0
