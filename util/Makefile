@@ -1,6 +1,6 @@
 # Makefile for BCPL/util
 
-BC=bcplc
+BC=../src/bcplc
 BFLAGS=-O
 
 all: cmpltest xref gpm
