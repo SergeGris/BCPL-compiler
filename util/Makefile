@@ -1,4 +1,4 @@
-# Makefile for bcplc/util
+# Makefile for BCPL/util
 
 BC=bcplc
 BFLAGS=-O
