@@ -1,6 +1,6 @@
 # Makefile for BCPL/src
 
-PREFIX?=/usr/local
+PREFIX?=/usr
 
 AFLAGS=--32
 
