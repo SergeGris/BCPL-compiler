@@ -1,4 +1,4 @@
-// Copyright (c) 2004, 2012 Robert Nordier.  All rights reserved.
+// Copyright (c) 2004, 2012 Robert Nordier. All rights reserved.
 
 // BCPL compiler x86 runtime
 

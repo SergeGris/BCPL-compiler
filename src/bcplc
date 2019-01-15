@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
 # A cc-like compiler driver for BCPL
-# Copyright (c) 2012 Robert Nordier. All rights reserved.
+# Copyright (c) 2012 Robert Nordier.  All rights reserved.
 
 error()
 {
@@ -9,7 +9,7 @@ error()
     exit 2
 }
 
-d=/usr/lib/BCPL
+d=/usr/local/lib/obcpl
 ohead="$d/su.o"
 otail="$d/blib.o $d/global.o $d/rt.o $d/sys.o"
 Oflag=0
@@ -35,7 +35,7 @@ do
     esac
 done
 if test $# -lt 1; then
-    error 'usage: ./bcplc [-COSc] [-o output] file ...'
+    error 'usage: obcpl [-COSc] [-o output] file ...'
 fi
 rm -f /tmp/$$_tmp.*
 for arg in $@

@@ -1,4 +1,4 @@
-/* Copyright (c) 2012 Robert Nordier.  All rights reserved. */
+/* Copyright (c) 2012 Robert Nordier. All rights reserved. */
 
 /* OCODE operators */
 #define S_TRUE      4

@@ -1,4 +1,4 @@
-/* Copyright (c) 2012 Robert Nordier.  All rights reserved. */
+/* Copyright (c) 2012 Robert Nordier. All rights reserved. */
 
 /* Patterns for peephole optimizer */
 
