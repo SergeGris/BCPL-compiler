@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
-# Make script for bcplc
+# Make script for obcpl
 
 DIRS="src doc"
 MAKE=make

@@ -1,17 +1,17 @@
 BCPLC INSTALL
 
 This is an x86 (IA-32) port of an old BCPL compiler (see README)
-and should build cleanly on x86 FreeBSD and Linux.  Differences
+and should build cleanly on x86 FreeBSD and Linux. Differences
 between Linux and FreeBSD versions of the compiler are minor and
 are restricted to the system interface file "sys.s" of the compiler
 runtime, which is provided in "sys_freebsd.s" and "sys_linux.s"
 variants.
 
 The compiler sources, together with object files needed to bootstrap
-the compiler, are in the "src" directory.  The "util" directory
-contains some utility programs, and one in particular, "cmpltest.b",
+the compiler, are in the "src" directory. The "util" directory
+contains some utility programs, and one in particular, "cmpltest.bcpl",
 will be found useful should you wish to test the compiler once that
-has been built and installed.  The "doc" directory contains
+has been built and installed. The "doc" directory contains
 relevant documentation.
 
 To build and install the compiler in automated fashion (assuming
@@ -23,9 +23,9 @@ followed by (as root)
 
     ./makeall install
 
-Otherwise, change to the "src" directory.  Check that the "sys.s"
+Otherwise, change to the "src" directory. Check that the "sys.s"
 symbolic link points to either "sys_linux.s" or "sys_freebsd.s",
-as appropriate for your system.  Enter
+as appropriate for your system. Enter
 
     make
 
@@ -33,21 +33,21 @@ to build the compiler, and
 
     make install
 
-to install the components.  By default, these mostly go in
-"/usr/lib/bcplc".  You can also change to the "doc" directory
+to install the components. By default, these mostly go in
+"/usr/local/lib/bcplc". You can also change to the "doc" directory
 and
 
     make install
 
-to install documentation to "/usr/share/doc/bcplc".
+to install documentation to "/usr/local/share/doc/bcplc".
 
 Should you wish to install the compiler somewhere other than
-"/usr/lib/bcplc", be sure to change occurrences of this path
+"/usr/local/lib/bcplc", be sure to change occurrences of this path
 in the compiler sources.
 
 Once the compiler is built and installed, it is possible to build
 and run the "cmpltest" utility in the "util" directory, to verify
-that all is in order.  The test should conclude:
+that all is in order. The test should conclude:
 
     119 TESTS COMPLETED, 0 FAILURE(S)
 

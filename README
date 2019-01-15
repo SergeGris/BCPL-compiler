@@ -23,7 +23,7 @@ The present distribution supplies a compiler backend (OCODE to x86
 code generator), together with peephole optimizer, and reasonably
 extensive runtime support. A few revisions have been made to the
 compiler frontend -- it looks for header files in a standard location,
-for instance -- and the runtime incorporates support for UNIX
+for instance -- and  the runtime incorporates support for UNIX
 command line arguments and error reporting. Some documentation
 that formed part of the original BCPL distribution tape is also
 included, as are a few utility programs.

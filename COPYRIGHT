@@ -1,0 +1,21 @@
+BCPLC COPYRIGHT
+
+Most of the files here are taken from a BCPL compiler distribution
+dating from the early 1980s.  None of the files bears a copyright
+notice in the original, but -- on the basis of other files in the
+distribution -- it seems reasonable to assume that the bulk of these
+are
+
+   (c) Copyright 1978-1980 Tripos Research Group
+       University of Cambridge
+       Computer Laboratory
+
+Changes and additions are
+
+    (c) Copyright 2004, 2012 Robert Nordier
+
+and are freely redistributable.
+
+
+Robert Nordier
+www.nordier.com
