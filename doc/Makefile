@@ -1,6 +1,6 @@
 # Makefile for BCPL/doc
 
-PREFIX?=/usr
+PREFIX?=/usr/local
 
 all:
 
