@@ -421,7 +421,7 @@ AND PERFORMGET() BE
        SOURCESTREAM := FINDINPUT(WORDV)
        IF FINDFAIL(SOURCESTREAM) THEN
           $( LET PATH = VEC 63
-             AND DIR = "/usr/local/lib/obcpl/"
+             AND DIR = "/usr/local/lib/bcplc/"
              AND APPEND(D, S) BE
               $( LET ND = D%0
                 FOR I = 1 TO S%0 DO $(
