@@ -29,7 +29,7 @@ $(
     READN:          70    // N := READN()
     TERMINATOR:     71    // Last byte read by READN()
     WRITEHEX:       75    // WRITEHEX(N,D)
-    WRITEF:         76    // WRITEF(F,A1,A2,...,A11)
+    WRITEF:         76    // WRITEF(F, A1, A2, ..., A11)
     WRITEOCT:       77    // WRITEOCT(N,D)
     GETBYTE:        85    // CH := GETBYTE(V, N)
     PUTBYTE:        86    // PUTBYTE(V, N, B)
